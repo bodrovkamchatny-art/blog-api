@@ -4,9 +4,11 @@ const express = require('express');
 const authRoutes  = require('./routes/auth');
 const postsRoutes = require('./routes/posts');
 
+
 const app = express();
 app.use(express.json());
-
+const commentsRoutes = require('./routes/comments');
+app.use('/posts/:id/comments', commentsRoutes);
 app.use('/auth',  authRoutes);
 app.use('/posts', postsRoutes);
 app.get('/test', (req, res) => {
