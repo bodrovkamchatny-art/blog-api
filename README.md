@@ -24,3 +24,7 @@ REST API для блогу з JWT авторизацією.
 1. Встанови залежності: npm install
 2. Створи .env файл
 3. Запусти: npm run dev
+
+### Коментарі
+- GET /posts/:id/comments — всі коментарі
+- POST /posts/:id/comments — додати коментар (потрібен токен)
